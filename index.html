@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Souk10 — السوق ديالك أونلاين</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="main">
+    <!-- Hero + recherche -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 data-i18n="hero_title">بِيع و شري بلا تعقيد</h1>
+        <p class="hero-sub" data-i18n="hero_sub"></p>
+        <div class="hero-badges">
+          <span data-i18n="hero_badge_1"></span>
+          <span data-i18n="hero_badge_2"></span>
+          <span data-i18n="hero_badge_3"></span>
+        </div>
+        <form class="search-card" action="index.html" method="get">
+          <div class="sc-field sc-grow">
+            <label data-i18n="search_ph"></label>
+            <input name="q" data-i18n-ph="search_ph">
+          </div>
+          <div class="sc-field">
+            <label data-i18n="all_categories"></label>
+            <select name="category" id="sc-cat"></select>
+          </div>
+          <div class="sc-field">
+            <label data-i18n="filter_city"></label>
+            <input name="city" list="cities-dl">
+            <datalist id="cities-dl"></datalist>
+          </div>
+          <div class="sc-field">
+            <label data-i18n="filter_price_min"></label>
+            <input name="min" type="number" min="0" step="1">
+          </div>
+          <div class="sc-field">
+            <label data-i18n="filter_price_max"></label>
+            <input name="max" type="number" min="0" step="1">
+          </div>
+          <div class="sc-field">
+            <label data-i18n="sort_by"></label>
+            <select name="sort">
+              <option value="newest" data-i18n="sort_newest"></option>
+              <option value="price_asc" data-i18n="sort_price_asc"></option>
+              <option value="price_desc" data-i18n="sort_price_desc"></option>
+            </select>
+          </div>
+          <button class="btn btn-accent sc-btn" type="submit" data-i18n="apply"></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Catégories -->
+    <section class="cats container">
+      <h2 class="sec-title" data-i18n="categories_title"></h2>
+      <div class="cat-chips" id="cat-chips"></div>
+    </section>
+
+    <!-- Résultats -->
+    <section class="container">
+      <div class="sec-head">
+        <h2 class="sec-title" id="results-title"></h2>
+        <a class="link-reset" href="index.html" data-i18n="reset"></a>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div id="pager"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="toasts"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Souk10 — Admin</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="main container">
+    <h1 class="sec-title" style="margin-top:24px">⚙ <span data-i18n="admin_panel"></span></h1>
+    <div class="admin-tabs" id="admin-tabs">
+      <button data-tab="dashboard" class="on">📊 <span data-i18n="ad_dashboard"></span></button>
+      <button data-tab="listings">📦 <span data-i18n="ad_listings"></span></button>
+      <button data-tab="users">👥 <span data-i18n="ad_users"></span></button>
+      <button data-tab="commissions">💰 <span data-i18n="ad_commissions"></span></button>
+      <button data-tab="messages">💬 <span data-i18n="ad_messages"></span></button>
+      <a class="btn btn-ghost btn-sm tab-back" href="index.html" data-i18n="back_site"></a>
+    </div>
+    <div class="admin-pane" id="admin-pane"></div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="toasts"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/admin.js"></script>
+</body>
+</html>

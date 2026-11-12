@@ -1,0 +1,5 @@
+# Bloque l'exécution de PHP dans le dossier des images uploadées
+<FilesMatch "\.(?i:php|phtml|php3|php4|php5|php7|phar)\d*$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
